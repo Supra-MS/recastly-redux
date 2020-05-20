@@ -41,6 +41,8 @@ function createStore(reducer) {
 }
 
 // App code (reducer): State should be immutable
+// 1 arg is initial state
+// 2 arg is object
 function todos(state = [], action) {
   if (action.type === 'ADD_TODO') {
     return state.concat([action.todo]);
