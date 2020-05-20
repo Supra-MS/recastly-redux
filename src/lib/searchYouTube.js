@@ -9,6 +9,7 @@ var searchYouTube = ({key, query, max = 5}, callback) => {
   })
     .done(({items}) => {
       if (callback) {
+        console.log("🥴", items)
         callback(items);
       }
     })
