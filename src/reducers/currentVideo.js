@@ -12,15 +12,3 @@ var currentVideoReducer = (state = null, action) => {
 };
 
 export default currentVideoReducer;
-
-
-/* 
-action.video
-
-const changeVideo = (video) => ({
-  //TODO:  Return some action object to change the currently playing video.
-  type: 'CHANGE_VIDEO',
-  video: video
-});
-
-*/
