@@ -14,45 +14,12 @@ import handleSearchChange from '../actions/search.js';
 class App extends React.Component {
   constructor(props) {
     super(props);
-
-    /* this.state = {
-      videos: [],
-      currentVideo: null
-    }; */
-
-    // this.getYouTubeVideos = this.getYouTubeVideos.bind(this);
   }
 
   componentDidMount() {
     this.props.handleSearchInputChange('silly cat videos')
-    // handleSearchInputChange('silly bird videos')
-
-
-    // setTimeout( () => {
-    //   // this.getYouTubeVideos('funny cat video');
-    //   this.props.store.dispatch(handleSearchChange('funny cat video'))
-    // }, 1000)
     // console.log('this.props.store', this.props.store);
-    //  store.state
   }
-
-  /* handleVideoListEntryTitleClick(video) {
-    this.setState({currentVideo: video});
-  } */
-
-  // getYouTubeVideos(query) {
-  //   var options = {
-  //     key: this.props.API_KEY,
-  //     query: query
-  //   };
-
-  //   this.props.searchYouTube(options, (videos) =>
-  //     this.setState({
-  //       videos: videos,
-  //       currentVideo: videos[0]
-  //     })
-  //   );
-  // }
 
   //TODO: swap out the React components below for the container components
   //  you wrote in the 'containers' directory.
@@ -80,7 +47,7 @@ class App extends React.Component {
 const mapDispatchToProps = (dispatch) => {
   return {
     handleSearchInputChange: (e) => {
-      dispatch(handleSearchChange(e)) // handleVideoSearch ; handleSearchChange
+      dispatch(handleSearchChange(e))
     }
   }
 };
@@ -88,11 +55,3 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(null, mapDispatchToProps)(App);
 
 // export default App;
-
-
-// <Search getYouTubeVideos={this.getYouTubeVideos}/>
-/* <VideoPlayer video={this.state.currentVideo}/> */
-/* <VideoList
-              handleVideoListEntryTitleClick={this.handleVideoListEntryTitleClick.bind(this)}
-              videos={this.state.videos}
-            /> */
