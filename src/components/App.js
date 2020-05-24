@@ -8,6 +8,7 @@ import SearchContainer from '../containers/SearchContainer.js';
 // import AppContainer from '../containers/AppContainer.js';
 import { connect } from 'react-redux';
 import handleSearchChange from '../actions/search.js';
+import AutoPlayContainer from '../containers/AutoPlayContainer.js';
 
 
 
@@ -17,7 +18,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.props.handleSearchInputChange('silly cat videos')
+    // this.props.handleSearchInputChange('silly cat videos')
     // console.log('this.props.store', this.props.store);
   }
 
@@ -29,6 +30,9 @@ class App extends React.Component {
         <nav className="navbar">
           <div className="col-md-6 col-md-offset-3">
             <SearchContainer />
+          </div>
+          <div className="col-md-6 col-md-offset-3">
+            <AutoPlayContainer />
           </div>
         </nav>
         <div className="row">

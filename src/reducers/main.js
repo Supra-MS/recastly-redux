@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux';
 import currentVideo from './currentVideo.js';
 import videoList from './videoList.js';
+import autoPlayToggle from './autoPlayToggle.js';
 
 //var rootReducer = combineReducers({currentVideo: currentVideo, videoList: videoList})
-const rootReducer = combineReducers({currentVideo, videoList})
+const rootReducer = combineReducers({currentVideo, videoList, autoPlayToggle})
 
 
 
