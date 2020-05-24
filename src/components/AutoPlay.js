@@ -5,7 +5,7 @@ const AutoPlay = (props) => {
     <div>
       <form>
         <label htmlFor="ap">AutoPlay</label>
-        <input type="checkbox" id="ap" onClick={ () => {props.handleAutoPlayClick()}} />
+        <input type="checkbox" id="ap" onClick={ () => { props.handleAutoPlayClick(); }} />
       </form>
     </div>
 
@@ -14,7 +14,4 @@ const AutoPlay = (props) => {
 
 export default AutoPlay;
 
-// checked = true ?
-
-/// <button type="button" onClick={ () => {props.handleAutoPlayClick()}}>AutoPlay</button>
-//           console.log('Props-->:', props, 'Props Event-->:', props.handleAutoPlayClick)
+// console.log('Props-->:', props, 'Props Event-->:', props.handleAutoPlayClick)

@@ -6,9 +6,9 @@ import handleSearchChange from '../actions/search.js';
 const mapDispatchToProps = (dispatch) => {
   return {
     handleSearchInputChange: (e) => {
-      dispatch(handleSearchChange(e))
+      dispatch(handleSearchChange(e));
     }
-  }
+  };
 };
 
 const AppContainer = connect(null, mapDispatchToProps)(App);

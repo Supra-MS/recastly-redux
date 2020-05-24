@@ -9,13 +9,13 @@ var handleVideoSearch = (q) => {
   let options = {
     key: YOUTUBE_API_KEY,
     query: q
-  }
-  return (dispatch) => {
-    searchYouTube(options, data => {
-      dispatch(changeVideoList(data))
-      dispatch(changeVideo(data[3]))
-    })
-  }
+  };
+  return _.debounce((dispatch) => {
+    searchYouTube(options, (data) => {
+      dispatch(changeVideoList(data));
+      dispatch(changeVideo(data[3]));
+    });
+  }, 2000);
 };
 
 export default handleVideoSearch;
