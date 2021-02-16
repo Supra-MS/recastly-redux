@@ -10,6 +10,7 @@ var handleVideoSearch = (q) => {
     key: YOUTUBE_API_KEY,
     query: q
   };
+  console.log(YOUTUBE_API_KEY, '909009909090')
   return _.debounce((dispatch) => {
     searchYouTube(options, (data) => {
       dispatch(changeVideoList(data));
